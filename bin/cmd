@@ -1,0 +1,30 @@
+#!/usr/bin/env node
+'use strict';
+const [yargs, fetch] = [require('yargs'), require('isomorphic-fetch')];
+const USAGE = 'fetch [options]';
+const cmdShow = () => (
+  [
+    'show',
+    'show ruby',
+    yargs => (
+      yargs.option('url', {
+        alias: 'u',
+        describe: 'job description origin site',
+        coerce: 'u', opt => {
+          //TODO: url validator
+        }
+      })
+    ),
+    argv => {
+      console.log(argv.url);
+    }
+  ]
+)
+
+const argv = yargs
+    .usage(USAGE)
+    .command(...cmdShow())
+    .example('show -u https://ruby-china.org', 'show all about ruby')
+    .help('h')
+    .alias('h', 'help')
+    .argv;

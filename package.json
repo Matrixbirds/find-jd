@@ -1,0 +1,23 @@
+{
+  "name": "find-jd",
+  "version": "1.0.0",
+  "description": "find jd",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Matrixbirds/find-jd.git"
+  },
+  "author": "matrixbirds",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Matrixbirds/find-jd/issues"
+  },
+  "homepage": "https://github.com/Matrixbirds/find-jd#readme",
+  "dependencies": {
+    "isomorphic-fetch": "^2.2.1",
+    "yargs": "^7.1.0"
+  }
+}
